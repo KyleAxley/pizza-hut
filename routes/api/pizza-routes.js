@@ -8,7 +8,6 @@ const {
 } = require('../../controllers/pizza-controller');
 
 //set up GET all and POST at /api/pizzas
-
 router
     .route('/')
     .get(getAllPizza)
