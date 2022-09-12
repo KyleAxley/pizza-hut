@@ -1,6 +1,7 @@
 const { Pizza } = require("../models");
 
 const pizzaController = {
+
   //get all pizzas
   getAllPizza(req, res) {
     Pizza.find({})
@@ -16,7 +17,7 @@ const pizzaController = {
         res.status(400).json(err);
       });
   },
-
+  
   //get on pizza by id
   getPizzaById({ params }, res) {
     Pizza.findOne({ _id: params.id })
@@ -58,7 +59,7 @@ const pizzaController = {
       })
       .catch((err) => res.status(400).json(err));
   },
-
+  
   //delete a pizza
   deletePizza({ params }, res) {
     Pizza.findOneAndDelete({ _id: params.id })
